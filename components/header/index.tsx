@@ -8,10 +8,22 @@ import MessageIcon from "@mui/icons-material/Message";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import AllInboxIcon from "@mui/icons-material/AllInbox";
 import AvatarMenu from "@/components/header/popup-menu/avatar-menu";
+import { useDispatch, useSelector } from "react-redux";
+import { addData } from "@/store/slices/categoriesSlice";
+import { addDataProducts } from "@/store/slices/productsSlice";
+import { useEffect } from "react";
 
-export default function Header() {
+export default function Header(props: any) {
+  let { lstCategores, lstProducts } = props;
+  let dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(addData(lstCategores));
+    dispatch(addDataProducts(lstProducts));
+  }, []);
+
   return (
-    <div className="bg-[#FFBA00] px-10 py-4 sticky top-0 ">
+    <div className="bg-[#FFBA00] px-10 py-4 sticky top-0 left-0 z-50 ">
       <div className="flex flex-row justify-between   text-[12px] text-[#222] ">
         <div className="flex flex-row gap-5 ">
           <span>Chợ Tốt</span>

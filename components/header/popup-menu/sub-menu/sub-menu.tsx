@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import React from "react";
 
-export default function SubMenuHover(props: any) {
-  let { data } = props;
+export default function SubMenuHover() {
+  // let { data } = props;
 
   return (
     <div className=" w-[300px] h-[500px] bg-[#fff] rounded-[8px] drop-shadow-lg ">

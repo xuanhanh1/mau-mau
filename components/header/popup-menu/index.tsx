@@ -4,9 +4,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SubMenu from "./sub-menu";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
-import { categories } from "@/interface/categories-interface";
-import { stat } from "fs";
-import { log } from "console";
+import { ICategories } from "@/interface/categories-interface";
 
 export default function MouseHoverPopover() {
   const [dropDown, setDropDown] = React.useState<boolean>(false);
@@ -57,7 +55,7 @@ export default function MouseHoverPopover() {
       {dropDown && (
         <div className="h-[500px] absolute top-10 left-0 drop-shadow-lg z-50  w-[560px] overflow-y-auto  ">
           <div className="overflow-y-auto">
-            {newLst?.map((item: categories, index: number) => {
+            {newLst?.map((item: ICategories, index: number) => {
               return (
                 <SubMenu key={index} data={item} lstItem={item.products} />
               );

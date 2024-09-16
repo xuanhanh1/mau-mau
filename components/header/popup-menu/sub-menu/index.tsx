@@ -4,7 +4,6 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 export default function SubMenu(props: any) {
   let { data, lstItem } = props;
   const [hoverMenu, setHoverMenu] = useState<boolean>(false);
-  const [click, setClick] = useState<boolean>(false);
 
   return (
     <>
@@ -30,7 +29,10 @@ export default function SubMenu(props: any) {
             <div className=" w-[250px] h-[624px]  overflow-y-auto  bg-[#fff] rounded-[8px] drop-shadow-lg fixed top-0 overflow-y-auto  left-[305px] z-50  ">
               {lstItem?.map((i: any, index: number) => {
                 return (
-                  <p className="px-5 py-2 hover:bg-[#f2f2f2] rounded-[4px] ">
+                  <p
+                    className="px-5 py-2 hover:bg-[#f2f2f2] rounded-[4px] "
+                    key={index}
+                  >
                     {i.name}
                   </p>
                 );

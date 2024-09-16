@@ -4,6 +4,7 @@ export interface IPost {
   title: string;
   categoryId_old: string;
   productId_old: string;
+  product_name: string;
   area: number;
   price: number;
   minPrice: number;

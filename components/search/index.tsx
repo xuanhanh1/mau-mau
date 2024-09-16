@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function SearchBox() {
   return (
     <form className="max-w-md mx-auto w-[500px] ">

@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { categories } from "@/interface/categories-interface";
+import { ICategories } from "@/interface/categories-interface";
 
 interface State {
-  data: categories[];
+  data: ICategories[];
   loading: boolean;
   error: null;
 }

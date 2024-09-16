@@ -44,13 +44,19 @@ export default function AvatarMenu() {
             {menu.map((item: IMenu, index: number) => {
               return (
                 <>
-                  <p className="py-2 px-4 bg-[#F5F5F5] text-[12px] font-bold text-[#E1B78B] mt-4 ">
+                  <p
+                    className="py-2 px-4 bg-[#F5F5F5] text-[12px] font-bold text-[#E1B78B] mt-4 "
+                    key={index}
+                  >
                     {item.title}
                   </p>
                   <div className=" py-2">
                     {item.array.map((i: IMenuSub, j: number) => {
                       return (
-                        <div className="flex flex-row gap-2 items-center py-2 px-4 text-[14px] text-[#222] ">
+                        <div
+                          className="flex flex-row gap-2 items-center py-2 px-4 text-[14px] text-[#222] "
+                          key={j}
+                        >
                           <img
                             src={i.icon}
                             alt=""

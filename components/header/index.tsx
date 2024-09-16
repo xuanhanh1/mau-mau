@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addData } from "@/store/slices/categoriesSlice";
 import { addDataProducts } from "@/store/slices/productsSlice";
 import { useEffect } from "react";
+import Link from "next/link";
 
 export default function Header(props: any) {
   let { lstCategores, lstProducts } = props;
@@ -39,7 +40,9 @@ export default function Header(props: any) {
       </div>
 
       <div className="flex flex-row items-center justify-between mt-2 ">
-        <div>Cho tot</div>
+        <Link href="/">
+          <div>Cho tot</div>
+        </Link>
         <div>
           <PopupMenu />
         </div>

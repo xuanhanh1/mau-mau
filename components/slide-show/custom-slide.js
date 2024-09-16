@@ -29,15 +29,15 @@ function CustomCarousel({ children }) {
     });
   };
 
-  const slidePrev = () => {
-    setActiveIndex((val) => {
-      if (val <= 0) {
-        return children.length - 1;
-      } else {
-        return val - 1;
-      }
-    });
-  };
+  // const slidePrev = () => {
+  //   setActiveIndex((val) => {
+  //     if (val <= 0) {
+  //       return children.length - 1;
+  //     } else {
+  //       return val - 1;
+  //     }
+  //   });
+  // };
 
   const AutoPlayStop = () => {
     if (timeID > 0) {

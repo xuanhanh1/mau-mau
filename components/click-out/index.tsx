@@ -17,8 +17,6 @@ const ClickOutWrapper: React.FC<ClickOutWrapperProps> = ({
     const handleClickOutside = (event: MouseEvent) => {
       // Kiểm tra nếu click bên ngoài element được tham chiếu
 
-      console.log("wrapperRef.current", event);
-
       if (
         wrapperRef.current &&
         !wrapperRef.current.contains(event.target as Node)

@@ -1,4 +1,4 @@
-export interface categories {
+export interface ICategories {
   createdAt: number;
   description: string;
   giveaway: string;
